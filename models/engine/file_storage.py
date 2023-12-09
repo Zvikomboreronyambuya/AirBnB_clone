@@ -57,6 +57,8 @@ class FileStorage:
                         for k, v in obj_dict.items()}
 
             FileStorage.__objects = obj_dict
+        except Exception as e:
+            print(f"Error during deserialization: {e}")
 
     def attributes(self):
         """Returns the valid attributes and their types for classname."""
